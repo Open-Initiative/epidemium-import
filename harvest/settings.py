@@ -1,3 +1,5 @@
+ckan_eu_groups = ['eurovoc_domain_100153', 'eurovoc_domain_100155', 'eurovoc_domain_100156']
+
 ckan_fr_organizations = ["Premier ministre",
     "Eurostat",
     "Institut National de la Statistique et des Etudes Economiques (INSEE)",
