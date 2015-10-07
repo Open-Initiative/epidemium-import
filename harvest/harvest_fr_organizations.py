@@ -7,8 +7,10 @@ headers = ['description', 'name', 'logo', 'title', 'page']
 columns = ['description', 'id', 'logo', 'name', 'page']
 url = "https://www.data.gouv.fr/api/1/organizations/"
 
-csvout = csv.writer(open('../data/organizations.csv', 'w'), delimiter=';')
+csvout = csv.writer(open('../data/organizations.csv', 'w', encoding='utf-8'), delimiter=';')
 csvout.writerow(headers)
+
+count = 0
 
 while url:
     response = request.urlopen(url)
@@ -20,3 +22,6 @@ while url:
             line = [organization[column] for column in columns]
             csvout.writerow(line)
 
+            count = count + 1
+
+print('count', count)
