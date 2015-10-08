@@ -4,6 +4,13 @@ from urllib.request import Request, urlopen, HTTPError
 import json, csv
 from settings import *
 import ast
+import argparse
+
+parser = argparse.ArgumentParser(description='debut / fin / nombres de datasets')
+parser.add_argument('-s', '--start', type=int, default=0, help='debut de ligne' )
+parser.add_argument('-e', '--end', type=int, default=0, help='s arrete a stop-1 , si O ou null alors le script va a la fin ')
+parser.add_argument('-c', '--count', type=int, default=0, help='nombre de boucles a effectuer si 0 ou null alors pas compris en compte' )
+args = parser.parse_args()
 
 # LOOP =  17688
 # #res count 2
@@ -11,9 +18,10 @@ import ast
 
 loop_count = 0
 loop_count_res = 0
-loop_serie = 1000
-loop_start = 4000
-loop_end = 0
+loop_serie = args.count
+loop_start = args.start
+
+loop_end = args.end
 skip_dataset = False
 skip_resource = False
 debug_datatset = False
