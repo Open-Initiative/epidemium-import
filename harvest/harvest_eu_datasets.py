@@ -3,7 +3,8 @@ from urllib import request
 import json, csv
 from settings import *
 
-columns = ['owner_org', 'id', 'title', 'description', 'url', 'organization']
+columns = ['owner_org', 'id', 'title', 'name', 'resources', 'description', 'url', 'organization']
+ckan_eu_groups = ["eurovoc_domain_100142", "eurovoc_domain_100143", "eurovoc_domain_100144", "eurovoc_domain_100145", "eurovoc_domain_100146", "eurovoc_domain_100147", "eurovoc_domain_100148", "eurovoc_domain_100149", "eurovoc_domain_100150", "eurovoc_domain_100151", "eurovoc_domain_100152", "eurovoc_domain_100153", "eurovoc_domain_100154", "eurovoc_domain_100155", "eurovoc_domain_100156", "eurovoc_domain_100157", "eurovoc_domain_100158", "eurovoc_domain_100159", "eurovoc_domain_100160", "eurovoc_domain_100161", "eurovoc_domain_100162"]
 groups = ckan_eu_groups
 base_url = "http://open-data.europa.eu/data/api/3/action/package_search"
 
